@@ -80,10 +80,11 @@ class DetailView extends StatefulWidget {
       }),
     );
   }
+
   Widget _ayatItem({required Ayat ayat}) => Padding(
-    padding: EdgeInsets.only(top: 24),
-    child: Column(
-      crossAxisAlignment: CrossAxisAlignment.stretch,
+        padding: EdgeInsets.only(top: 24),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             Container(
               padding: EdgeInsets.symmetric(horizontal: 12, vertical: 10),
@@ -98,44 +99,51 @@ class DetailView extends StatefulWidget {
                         color: text1,
                         borderRadius: BorderRadius.circular(27 / 2)),
                     child: Center(
-                      child: Text('${ayat.nomor}',style: GoogleFonts.poppins(fontWeight: FontWeight.w500),),
+                      child: Text(
+                        '${ayat.nomor}',
+                        style: GoogleFonts.poppins(
+                            fontWeight: FontWeight.w500, color: Colors.white),
+                      ),
                     ),
                   ),
                   Spacer(),
                   const Icon(
-                  Icons.share_outlined,
-                  
+                    Icons.share_outlined,
                   ),
                   const SizedBox(
-                  width: 16.0,
+                    width: 16.0,
                   ),
                   const Icon(
-                  Icons.play_arrow_outlined,
-                  
+                    Icons.play_arrow_outlined,
                   ),
                   const SizedBox(
-                  width: 16.0,
+                    width: 16.0,
                   ),
                   const Icon(
-                  Icons.bookmark_outline,
-                  
+                    Icons.bookmark_outline,
                   ),
-                  
-  
                 ],
               ),
             ),
             const SizedBox(
-            height: 24.0,
+              height: 24.0,
             ),
-            Text(ayat.ar,style: GoogleFonts.amiri(fontWeight: FontWeight.bold, fontSize: 18), textAlign: TextAlign.right ,),
+            Text(
+              ayat.ar,
+              style:
+                  GoogleFonts.amiri(fontWeight: FontWeight.bold, fontSize: 18),
+              textAlign: TextAlign.right,
+            ),
             const SizedBox(
-            height: 16.0,
+              height: 16.0,
             ),
-            Text(ayat.idn,style: GoogleFonts.poppins(fontSize: 16) ,),
+            Text(
+              ayat.idn,
+              style: GoogleFonts.poppins(fontSize: 16),
+            ),
           ],
         ),
-  );
+      );
 
   Widget _details({required Surah surah}) => Padding(
         padding: const EdgeInsets.symmetric(horizontal: 24),
